@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondo"
+    tools:context=".PantallaAlarmas"
+    >
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtNomHora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Seleccione un horario"
+            android:gravity="left"
+            android:layout_weight="0.5"
+            android:textSize="20dp"
+            android:fontFamily="serif"
+            android:padding="7dp"
+            android:textColor="@color/timber"
+            />
+
+        <TextView
+            android:id="@+id/txtHora"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="1dp"
+            android:fontFamily="serif"
+            android:gravity="end"
+            android:text=""
+            android:textSize="18dp"
+            android:textColor="@color/timber"/>
+
+        <TextView
+            android:id="@+id/txtDosPuntos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:gravity="end"
+            android:text=":"
+            android:layout_weight="0"
+            android:textSize="18dp"
+            android:fontFamily="serif"
+            android:textColor="@color/timber"
+            />
+        <TextView
+            android:id="@+id/txtMinuto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:gravity="end"
+            android:text=""
+            android:layout_weight="0"
+            android:textSize="18dp"
+            android:fontFamily="serif"
+            android:textColor="@color/timber"
+            />
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnReloj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Abrir Reloj"
+        android:background="@color/maize"
+        android:layout_margin="10dp"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="serif"
+        android:textStyle="bold"
+        android:textSize="17dp"
+        android:padding="7dp"
+        />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txtNomDescripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="0.5"
+            android:fontFamily="serif"
+            android:gravity="left"
+            android:padding="7dp"
+            android:text="Descripcion: "
+            android:textSize="18dp"
+            android:textColor="@color/timber"
+            />
+
+        <EditText
+            android:id="@+id/editDescripcion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:hint="Ingresar  descripcion..."
+            android:inputType="textCapSentences"
+            android:maxWidth="250dp"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textColor="@color/timber"
+            android:layout_toRightOf="@id/txtNomDescripcion"
+
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txtNomLugar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:text="Ubicacion: "
+            android:gravity="left"
+            android:layout_weight="0.5"
+            android:textSize="18dp"
+            android:fontFamily="serif"
+            android:padding="7dp"
+            android:textColor="@color/timber"
+
+            />
+
+        <EditText
+            android:id="@+id/editUbicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:hint="Ingresar ubicacion..."
+            android:inputType="textCapSentences"
+            android:maxLength="40"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@color/timber"
+            android:layout_toRightOf="@id/txtNomLugar"/>
+    </RelativeLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:stretchColumns="1, 2"
+        android:layout_marginTop="100dp"
+        >
+        <TableRow
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+
+            <Button
+                android:id="@+id/btnAgregarEvento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:backgroundTint="@color/maize"
+                android:text="IR AL CALENDARIO"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:textSize="12dp"
+                />
+            <Button
+                android:id="@+id/btnAgregarAlarma"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:backgroundTint="@color/maize"
+                android:text="IR A ALARMA"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:textSize="12dp"
+                />
+        </TableRow>
+    </TableLayout>
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:stretchColumns="1, 2"
+    android:layout_marginTop="10dp">
+    <TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content">
+    <Button
+        android:id="@+id/btnCargarEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:backgroundTint="@color/maize"
+        android:text="CARGAR EVENTO"
+        android:textStyle="bold"
+        android:fontFamily="serif"
+        android:textSize="12dp"
+        />
+        <Button
+            android:id="@+id/btnBorrar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_column="2"
+            android:backgroundTint="@color/maize"
+            android:text="BORRAR"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:textSize="12dp"
+            />
+    </TableRow>
+</TableLayout>
+
+</LinearLayout>
